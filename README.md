@@ -1,5 +1,7 @@
 # Osso a Osso
 
+**Jogar:** https://ograndebe.github.io/osso-a-osso/
+
 Campo minado de escavação: limpe a terra, encontre os ossos e monte esqueletos
 de dinossauros para completar o museu. O primeiro clique é sempre seguro.
 
