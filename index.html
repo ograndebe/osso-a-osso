@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1510" />
+    <meta
+      name="description"
+      content="Osso a Osso: um campo minado de escavação. Limpe a terra, encontre esqueletos de dinossauros e complete o museu."
+    />
+    <title>Osso a Osso — Escavações Jurássicas</title>
+    <link rel="icon" type="image/png" href="./overlays/bone.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Pixelify+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <section id="screen-expedition" class="screen" aria-label="Museu e expedição">
+        <div id="expedition-content"></div>
+      </section>
+
+      <section id="screen-dig" class="screen hidden" aria-labelledby="dig-title">
+        <div class="dig-topbar">
+          <button class="icon-btn" data-action="back" aria-label="Voltar ao museu">
+            <img src="./ui/back.png" alt="" />
+          </button>
+          <div class="dig-heading">
+            <p id="dig-era" class="dig-era"></p>
+            <h2 id="dig-title" class="dig-title">Escavação</h2>
+          </div>
+          <button class="icon-btn" data-action="help" aria-label="Como jogar">
+            <img src="./ui/hint.png" alt="" />
+          </button>
+        </div>
+
+        <div class="dig-stats">
+          <span class="stat">
+            <img class="stat-bone" src="./overlays/bone.png" alt="" />
+            <span id="bones-left">0</span>
+            <span class="stat-label">ossos</span>
+          </span>
+          <span class="stat">
+            <span class="clock" aria-hidden="true">◷</span>
+            <span id="timer">0:00</span>
+          </span>
+        </div>
+
+        <div class="board-frame" id="board-frame">
+          <canvas id="board" aria-label="Tabuleiro de escavação"></canvas>
+        </div>
+
+        <p class="controls desktop">Clique cava · Clique direito marca · Duplo clique abre ao redor</p>
+        <p class="controls mobile">Toque cava · Segure marca · Duplo toque abre ao redor</p>
+
+        <div class="dig-actions">
+          <button class="text-btn" data-action="restart">
+            <img src="./ui/restart.png" alt="" /> Reiniciar
+          </button>
+          <button class="text-btn" data-action="help">
+            <img src="./ui/hint.png" alt="" /> Como jogar
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <dialog id="modal"></dialog>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

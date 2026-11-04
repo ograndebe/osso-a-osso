@@ -1,0 +1,757 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-04T18:15:04.315Z",
+  "sources": {
+    "skeletons": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+    "ui": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+    "overlays": "Gemini_Generated_Image_8i8xvg8i8xvg8i8x.jpg"
+  },
+  "notes": [
+    "UI inclui o quadrado creme de fundo; use como botão.",
+    "Esqueletos incluem o pedestal de museu.",
+    "São 12 esqueletos únicos + 2 extras: velociraptor_alt e extra_small_theropod."
+  ],
+  "sprites": [
+    {
+      "id": "skeleton_coelophysis",
+      "file": "skeletons/coelophysis.png",
+      "group": "skeleton",
+      "label": "Coelophysis",
+      "era": "Triássico",
+      "fact": "Magro e veloz; muitos indivíduos foram encontrados juntos.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 362,
+        "y": 1092,
+        "w": 327,
+        "h": 272
+      },
+      "size": {
+        "w": 335,
+        "h": 280
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_plateosaurus",
+      "file": "skeletons/plateosaurus.png",
+      "group": "skeleton",
+      "label": "Plateosaurus",
+      "era": "Triássico",
+      "fact": "Pescoço longo e corpo robusto; um dos primeiros gigantes.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 668,
+        "y": 1098,
+        "w": 314,
+        "h": 266
+      },
+      "size": {
+        "w": 322,
+        "h": 274
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_eoraptor",
+      "file": "skeletons/eoraptor.png",
+      "group": "skeleton",
+      "label": "Eoraptor",
+      "era": "Triássico",
+      "fact": "Um dos dinossauros mais antigos conhecidos; do tamanho de um cachorro médio.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 36,
+        "y": 1126,
+        "w": 338,
+        "h": 238
+      },
+      "size": {
+        "w": 346,
+        "h": 246
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_velociraptor_alt",
+      "file": "skeletons/velociraptor_alt.png",
+      "group": "skeleton",
+      "label": "Velociraptor (variante extra)",
+      "era": "Cretáceo",
+      "fact": "Segunda pose de Velociraptor; provavelmente duplicada.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 29,
+        "y": 1398,
+        "w": 345,
+        "h": 270
+      },
+      "size": {
+        "w": 353,
+        "h": 278
+      },
+      "pedestal": true,
+      "extra": true,
+      "duplicateOf": "velociraptor"
+    },
+    {
+      "id": "skeleton_brachiosaurus",
+      "file": "skeletons/brachiosaurus.png",
+      "group": "skeleton",
+      "label": "Brachiosaurus",
+      "era": "Jurássico",
+      "fact": "Pescoço muito longo para alcançar as copas.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 669,
+        "y": 1610,
+        "w": 319,
+        "h": 378
+      },
+      "size": {
+        "w": 327,
+        "h": 386
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_archaeopteryx",
+      "file": "skeletons/archaeopteryx.png",
+      "group": "skeleton",
+      "label": "Archaeopteryx",
+      "era": "Jurássico",
+      "fact": "Ponte entre dinossauros e aves; tinha penas e dentes.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 88,
+        "y": 1714,
+        "w": 212,
+        "h": 274
+      },
+      "size": {
+        "w": 220,
+        "h": 282
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_stegosaurus",
+      "file": "skeletons/stegosaurus.png",
+      "group": "skeleton",
+      "label": "Stegosaurus",
+      "era": "Jurássico",
+      "fact": "Placas ósseas nas costas e espinhos na cauda.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 328,
+        "y": 1741,
+        "w": 324,
+        "h": 247
+      },
+      "size": {
+        "w": 332,
+        "h": 255
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_velociraptor",
+      "file": "skeletons/velociraptor.png",
+      "group": "skeleton",
+      "label": "Velociraptor",
+      "era": "Cretáceo",
+      "fact": "Pequeno, emplumado e com uma garra curvada em cada pé.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 1066,
+        "y": 1112,
+        "w": 306,
+        "h": 253
+      },
+      "size": {
+        "w": 314,
+        "h": 261
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_triceratops",
+      "file": "skeletons/triceratops.png",
+      "group": "skeleton",
+      "label": "Triceratops",
+      "era": "Cretáceo",
+      "fact": "Três chifres e um grande escudo ósseo.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 1393,
+        "y": 1140,
+        "w": 327,
+        "h": 225
+      },
+      "size": {
+        "w": 335,
+        "h": 233
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_tyrannosaurus",
+      "file": "skeletons/tyrannosaurus.png",
+      "group": "skeleton",
+      "label": "Tyrannosaurus",
+      "era": "Cretáceo",
+      "fact": "Um dos maiores predadores terrestres; mordida poderosa.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 1064,
+        "y": 1404,
+        "w": 370,
+        "h": 264
+      },
+      "size": {
+        "w": 378,
+        "h": 272
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_ankylosaurus",
+      "file": "skeletons/ankylosaurus.png",
+      "group": "skeleton",
+      "label": "Ankylosaurus",
+      "era": "Cretáceo",
+      "fact": "Couraça óssea e clava na cauda.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 1614,
+        "y": 1460,
+        "w": 379,
+        "h": 208
+      },
+      "size": {
+        "w": 387,
+        "h": 216
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_spinosaurus",
+      "file": "skeletons/spinosaurus.png",
+      "group": "skeleton",
+      "label": "Spinosaurus",
+      "era": "Cretáceo",
+      "fact": "Vela nas costas e hábitos ligados à água.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 1304,
+        "y": 1708,
+        "w": 430,
+        "h": 280
+      },
+      "size": {
+        "w": 438,
+        "h": 288
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_pteranodon",
+      "file": "skeletons/pteranodon.png",
+      "group": "skeleton",
+      "label": "Pteranodon",
+      "era": "Cretáceo",
+      "fact": "Não era dinossauro: era um pterossauro voador.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 1692,
+        "y": 1748,
+        "w": 322,
+        "h": 240
+      },
+      "size": {
+        "w": 330,
+        "h": 248
+      },
+      "pedestal": true,
+      "extra": false
+    },
+    {
+      "id": "skeleton_extra_small_theropod",
+      "file": "skeletons/extra_small_theropod.png",
+      "group": "skeleton",
+      "label": "Pequeno terópode extra",
+      "era": "—",
+      "fact": "Provável duplicata; não usado na campanha.",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 1064,
+        "y": 1804,
+        "w": 272,
+        "h": 184
+      },
+      "size": {
+        "w": 280,
+        "h": 192
+      },
+      "pedestal": true,
+      "extra": true
+    },
+    {
+      "id": "board_dirt_a",
+      "file": "board/dirt_a.png",
+      "group": "board",
+      "label": "Terra A",
+      "terrain": "dirt",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 48,
+        "y": 28,
+        "w": 300,
+        "h": 307
+      },
+      "size": {
+        "w": 292,
+        "h": 299
+      }
+    },
+    {
+      "id": "board_sand_a",
+      "file": "board/sand_a.png",
+      "group": "board",
+      "label": "Areia A",
+      "terrain": "sand",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 689,
+        "y": 28,
+        "w": 301,
+        "h": 307
+      },
+      "size": {
+        "w": 293,
+        "h": 299
+      }
+    },
+    {
+      "id": "board_sand_b",
+      "file": "board/sand_b.png",
+      "group": "board",
+      "label": "Areia B",
+      "terrain": "sand",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 48,
+        "y": 683,
+        "w": 300,
+        "h": 307
+      },
+      "size": {
+        "w": 292,
+        "h": 299
+      }
+    },
+    {
+      "id": "board_dirt_b",
+      "file": "board/dirt_b.png",
+      "group": "board",
+      "label": "Terra B",
+      "terrain": "dirt",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 368,
+        "y": 684,
+        "w": 300,
+        "h": 306
+      },
+      "size": {
+        "w": 292,
+        "h": 298
+      }
+    },
+    {
+      "id": "board_sand_c",
+      "file": "board/sand_c.png",
+      "group": "board",
+      "label": "Areia C",
+      "terrain": "sand",
+      "source": "Gemini_Generated_Image_3makkn3makkn3mak.jpg",
+      "sourceRect": {
+        "x": 689,
+        "y": 683,
+        "w": 301,
+        "h": 307
+      },
+      "size": {
+        "w": 293,
+        "h": 299
+      }
+    },
+    {
+      "id": "ui_sound_on",
+      "file": "ui/sound_on.png",
+      "group": "ui",
+      "label": "Som ligado",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 49,
+        "y": 49,
+        "w": 458,
+        "h": 458
+      },
+      "size": {
+        "w": 462,
+        "h": 462
+      }
+    },
+    {
+      "id": "ui_sound_off",
+      "file": "ui/sound_off.png",
+      "group": "ui",
+      "label": "Som desligado",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 534,
+        "y": 49,
+        "w": 477,
+        "h": 458
+      },
+      "size": {
+        "w": 481,
+        "h": 462
+      }
+    },
+    {
+      "id": "ui_restart",
+      "file": "ui/restart.png",
+      "group": "ui",
+      "label": "Reiniciar",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1038,
+        "y": 49,
+        "w": 476,
+        "h": 458
+      },
+      "size": {
+        "w": 480,
+        "h": 462
+      }
+    },
+    {
+      "id": "ui_back",
+      "file": "ui/back.png",
+      "group": "ui",
+      "label": "Voltar",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1541,
+        "y": 49,
+        "w": 458,
+        "h": 458
+      },
+      "size": {
+        "w": 462,
+        "h": 462
+      }
+    },
+    {
+      "id": "ui_map",
+      "file": "ui/map.png",
+      "group": "ui",
+      "label": "Mapa",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 49,
+        "y": 533,
+        "w": 459,
+        "h": 477
+      },
+      "size": {
+        "w": 463,
+        "h": 481
+      }
+    },
+    {
+      "id": "ui_museum",
+      "file": "ui/museum.png",
+      "group": "ui",
+      "label": "Museu",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 534,
+        "y": 533,
+        "w": 477,
+        "h": 477
+      },
+      "size": {
+        "w": 481,
+        "h": 481
+      }
+    },
+    {
+      "id": "ui_settings",
+      "file": "ui/settings.png",
+      "group": "ui",
+      "label": "Configurações",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1038,
+        "y": 533,
+        "w": 476,
+        "h": 477
+      },
+      "size": {
+        "w": 480,
+        "h": 481
+      }
+    },
+    {
+      "id": "ui_hint",
+      "file": "ui/hint.png",
+      "group": "ui",
+      "label": "Dica",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1541,
+        "y": 533,
+        "w": 458,
+        "h": 477
+      },
+      "size": {
+        "w": 462,
+        "h": 481
+      }
+    },
+    {
+      "id": "ui_close",
+      "file": "ui/close.png",
+      "group": "ui",
+      "label": "Fechar",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 49,
+        "y": 1036,
+        "w": 459,
+        "h": 474
+      },
+      "size": {
+        "w": 463,
+        "h": 478
+      }
+    },
+    {
+      "id": "ui_check",
+      "file": "ui/check.png",
+      "group": "ui",
+      "label": "Confirmar",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 534,
+        "y": 1036,
+        "w": 477,
+        "h": 474
+      },
+      "size": {
+        "w": 481,
+        "h": 478
+      }
+    },
+    {
+      "id": "ui_star",
+      "file": "ui/star.png",
+      "group": "ui",
+      "label": "Estrela",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1038,
+        "y": 1036,
+        "w": 476,
+        "h": 474
+      },
+      "size": {
+        "w": 480,
+        "h": 478
+      }
+    },
+    {
+      "id": "ui_lock",
+      "file": "ui/lock.png",
+      "group": "ui",
+      "label": "Bloqueado",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1541,
+        "y": 1036,
+        "w": 458,
+        "h": 474
+      },
+      "size": {
+        "w": 462,
+        "h": 478
+      }
+    },
+    {
+      "id": "ui_pickaxe",
+      "file": "ui/pickaxe.png",
+      "group": "ui",
+      "label": "Picareta",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 49,
+        "y": 1536,
+        "w": 458,
+        "h": 431
+      },
+      "size": {
+        "w": 462,
+        "h": 435
+      }
+    },
+    {
+      "id": "ui_arrow_right",
+      "file": "ui/arrow_right.png",
+      "group": "ui",
+      "label": "Avançar",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 534,
+        "y": 1536,
+        "w": 476,
+        "h": 431
+      },
+      "size": {
+        "w": 480,
+        "h": 435
+      }
+    },
+    {
+      "id": "ui_dust",
+      "file": "ui/dust.png",
+      "group": "ui",
+      "label": "Poeira",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1038,
+        "y": 1536,
+        "w": 476,
+        "h": 431
+      },
+      "size": {
+        "w": 480,
+        "h": 435
+      }
+    },
+    {
+      "id": "ui_sparkle",
+      "file": "ui/sparkle.png",
+      "group": "ui",
+      "label": "Brilho",
+      "background": "cream",
+      "source": "Gemini_Generated_Image_75b3sj75b3sj75b3.jpg",
+      "sourceRect": {
+        "x": 1541,
+        "y": 1536,
+        "w": 458,
+        "h": 431
+      },
+      "size": {
+        "w": 462,
+        "h": 435
+      }
+    },
+    {
+      "id": "overlay_bone",
+      "file": "overlays/bone.png",
+      "group": "overlay",
+      "label": "Osso",
+      "source": "Gemini_Generated_Image_8i8xvg8i8xvg8i8x.jpg",
+      "sourceRect": {
+        "x": 136,
+        "y": 136,
+        "w": 738,
+        "h": 751
+      },
+      "size": {
+        "w": 746,
+        "h": 759
+      }
+    },
+    {
+      "id": "overlay_bone_cracked",
+      "file": "overlays/bone_cracked.png",
+      "group": "overlay",
+      "label": "Osso trincado",
+      "source": "Gemini_Generated_Image_8i8xvg8i8xvg8i8x.jpg",
+      "sourceRect": {
+        "x": 1174,
+        "y": 136,
+        "w": 738,
+        "h": 751
+      },
+      "size": {
+        "w": 746,
+        "h": 759
+      }
+    },
+    {
+      "id": "overlay_flag",
+      "file": "overlays/flag.png",
+      "group": "overlay",
+      "label": "Bandeira",
+      "source": "Gemini_Generated_Image_8i8xvg8i8xvg8i8x.jpg",
+      "sourceRect": {
+        "x": 328,
+        "y": 1146,
+        "w": 519,
+        "h": 766
+      },
+      "size": {
+        "w": 527,
+        "h": 774
+      }
+    },
+    {
+      "id": "overlay_question",
+      "file": "overlays/question.png",
+      "group": "overlay",
+      "label": "Interrogação",
+      "source": "Gemini_Generated_Image_8i8xvg8i8xvg8i8x.jpg",
+      "sourceRect": {
+        "x": 1352,
+        "y": 1216,
+        "w": 382,
+        "h": 598
+      },
+      "size": {
+        "w": 390,
+        "h": 606
+      }
+    }
+  ]
+}
