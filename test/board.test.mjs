@@ -20,7 +20,7 @@ function seeded(seed) {
   };
 }
 
-test('primeiro clique é seguro e abre o 3x3', () => {
+test('primeira escavação é segura e abre o 3x3', () => {
   const game = createGame(6, 4);
   const first = 14;
   reveal(game, first, seeded(1), 1000);
@@ -32,7 +32,7 @@ test('primeiro clique é seguro e abre o 3x3', () => {
 
   const safe = new Set([first, ...neighbors(first, 6)]);
   for (const index of safe) {
-    assert.equal(game.cells[index].bone, false, `osso no primeiro clique: ${index}`);
+    assert.equal(game.cells[index].bone, false, `osso na primeira escavação: ${index}`);
     assert.equal(game.cells[index].revealed, true, `célula segura fechada: ${index}`);
   }
 
@@ -55,7 +55,7 @@ test('revelar toda a terra segura vence e zera os ossos restantes', () => {
   assert.equal(remainingBones(game), 0);
 });
 
-test('bandeira e interrogação alternam e bandeira bloqueia o clique', () => {
+test('bandeira e interrogação alternam e bandeira bloqueia o reveal direto', () => {
   const game = createGame(6, 4);
 
   toggleMark(game, 0);

@@ -120,7 +120,7 @@ function heroHtml(): string {
         <p class="eyebrow">Próxima escavação</p>
         <h2>${dino.name}</h2>
         <p class="hero-meta">${dino.era} · ${dino.side}×${dino.side} · ${dino.bones} ossos</p>
-        <p class="hero-blurb">Limpe a terra sem quebrar o fóssil. O primeiro clique é sempre seguro.</p>
+        <p class="hero-blurb">Limpe a terra sem quebrar o fóssil. A primeira escavação é sempre segura.</p>
         <button class="btn btn-primary" data-action="play" data-index="${next}" type="button">
           <img class="btn-icon" src="./ui/pickaxe.png" alt="" />Escavar
         </button>
@@ -173,7 +173,7 @@ function renderExpedition(): void {
     ${sections}
 
     <footer class="foot">
-      <p>Primeiro clique é sempre seguro. Toque em <b>Como jogar</b> para rever os controles.</p>
+      <p>A primeira escavação é sempre segura. Toque em <b>Como jogar</b> para rever os controles.</p>
     </footer>
   `;
 }
@@ -210,6 +210,7 @@ function openGame(index: number): void {
   hover = -1;
   lastTapIndex = -1;
   suppressUp = false;
+  longPressFired = false;
   clearLongPress();
   boardFrame.classList.remove('shake');
   screenExpedition.classList.add('hidden');
@@ -226,6 +227,7 @@ function showExpedition(): void {
   currentIndex = -1;
   game = null;
   hover = -1;
+  longPressFired = false;
   clearLongPress();
   screenDig.classList.add('hidden');
   screenExpedition.classList.remove('hidden');
@@ -240,6 +242,7 @@ function restartGame(): void {
   hover = -1;
   lastTapIndex = -1;
   suppressUp = false;
+  longPressFired = false;
   clearLongPress();
   boardFrame.classList.remove('shake');
   renderHud();
@@ -253,6 +256,19 @@ function afterAction(): void {
 
   if (game.status === 'won') handleWin();
   if (game.status === 'lost') handleLose();
+}
+
+function digCell(index: number): void {
+  if (!game || game.status === 'won' || game.status === 'lost') return;
+
+  const cell = game.cells[index];
+  if (!cell) return;
+
+  // Cava mesmo se a célula estiver marcada: bandeira vira interrogação e a
+  // revelação limpa a marca. Assim o toque longo nunca fica "preso" na flag.
+  if (cell.mark === 1) toggleMark(game, index);
+  reveal(game, index, Math.random, Date.now());
+  afterAction();
 }
 
 function handleWin(): void {
@@ -353,14 +369,14 @@ function openHelp(): void {
       <div class="help-cols">
         <div class="help-box">
           <h3>Desktop</h3>
-          <p><b>Clique</b> cava.<br /><b>Clique direito</b> marca bandeira / interrogação.<br /><b>Duplo clique</b> num número com as bandeiras certas abre as células ao redor.</p>
+          <p><b>Clique</b> marca bandeira / interrogação.<br /><b>Segure o clique</b> ou use o <b>clique direito</b> para cavar.<br /><b>Duplo clique</b> num número com as bandeiras certas abre as células ao redor.</p>
         </div>
         <div class="help-box">
           <h3>Mobile</h3>
-          <p><b>Toque</b> cava.<br /><b>Segure</b> marca bandeira / interrogação.<br /><b>Duplo toque</b> num número com as bandeiras certas abre as células ao redor.</p>
+          <p><b>Toque</b> marca bandeira / interrogação.<br /><b>Segure</b> para cavar.<br /><b>Duplo toque</b> num número com as bandeiras certas abre as células ao redor.</p>
         </div>
       </div>
-      <p class="help-tip">O primeiro clique é sempre seguro: o 3×3 ao redor nunca tem osso. A bandeira alterna entre bandeira, interrogação e vazio.</p>
+      <p class="help-tip">A primeira escavação é sempre segura: o 3×3 ao redor nunca tem osso. A bandeira alterna entre bandeira, interrogação e vazio.</p>
       <div class="modal-actions">
         <button class="btn btn-primary" data-action="close-modal" type="button">Entendi</button>
       </div>
@@ -426,9 +442,7 @@ function bindCanvas(): void {
       if (event.button === 2 || (event.button === 0 && event.ctrlKey)) {
         event.preventDefault();
         suppressUp = true;
-        toggleMark(game, index);
-        renderHud();
-        draw();
+        digCell(index);
         return;
       }
 
@@ -443,17 +457,16 @@ function bindCanvas(): void {
       if (event.button !== 0) return;
     } else {
       event.preventDefault();
-      board.setPointerCapture(event.pointerId);
-      clearLongPress();
-      longPressTimer = window.setTimeout(() => {
-        if (!game || game.status === 'won' || game.status === 'lost') return;
-        longPressFired = true;
-        toggleMark(game, downIndex);
-        navigator.vibrate?.(8);
-        renderHud();
-        draw();
-      }, 420);
     }
+
+    board.setPointerCapture(event.pointerId);
+    clearLongPress();
+    longPressTimer = window.setTimeout(() => {
+      if (!game || game.status === 'won' || game.status === 'lost') return;
+      longPressFired = true;
+      digCell(downIndex);
+      navigator.vibrate?.(8);
+    }, 420);
   });
 
   board.addEventListener('pointermove', (event) => {
@@ -480,6 +493,7 @@ function bindCanvas(): void {
   board.addEventListener('pointerup', (event) => {
     if (!game || game.status === 'won' || game.status === 'lost') {
       clearLongPress();
+      longPressFired = false;
       return;
     }
 
@@ -512,7 +526,7 @@ function bindCanvas(): void {
     if (isDouble && game.cells[index].revealed) {
       chord(game, index, Math.random, Date.now());
     } else {
-      reveal(game, index, Math.random, Date.now());
+      toggleMark(game, index);
     }
 
     afterAction();

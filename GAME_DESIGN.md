@@ -22,13 +22,14 @@ montagem do esqueleto → ficha → próximo sítio.
 
 - Tabuleiro `N×N` com `B` ossos escondidos.
 - Célula aberta mostra quantos ossos existem nas 8 vizinhas (0 abre em cascata).
-- Célula com osso nunca é segura: clicar nela **trinca o fóssil e encerra a escavação**.
-  Retry imediato, sem penalidade permanente.
+- Célula com osso nunca é segura: **cavar** nela trinca o fóssil e encerra a
+  escavação. Retry imediato, sem penalidade permanente.
 - Bandeira marca suspeita. Ciclo: bandeira → `?` → vazio.
 - **Vitória:** todas as células sem osso reveladas. Os ossos restantes são
   escavados automaticamente e o esqueleto é montado.
-- **Primeiro clique seguro:** a área 3×3 ao redor do primeiro clique fica sem
-  ossos. A primeira abertura sempre rende uma boa área e nunca perde de cara.
+- **Primeira escavação segura:** a área 3×3 ao redor da primeira célula cavada
+  fica sem ossos. A primeira abertura sempre rende uma boa área e nunca perde de
+  cara.
 - **Chord:** num número revelado, se a quantidade de bandeiras vizinhas for igual
   ao número, revela as demais vizinhas. Desktop: duplo clique ou clique do meio.
   Mobile: duplo toque.
@@ -39,14 +40,14 @@ montagem do esqueleto → ficha → próximo sítio.
 
 | Ação | Desktop | Mobile |
 |---|---|---|
-| Cavar | clique esquerdo | toque |
-| Bandeira | clique direito | toque longo (~400 ms) |
+| Bandeira | clique esquerdo | toque |
+| Cavar | segurar o clique esquerdo / clique direito | toque longo (~420 ms) |
 | Chord | duplo clique / clique do meio | duplo toque |
 | Reiniciar | `R` | botão |
 
-Detalhes de implementação: `touch-action: manipulation`, bloquear menu de
-contexto e seleção de texto, cancelar toque longo se o dedo mover mais de 10 px.
-Feedback háptico com `navigator.vibrate` quando disponível.
+Detalhes de implementação: `touch-action: none` no tabuleiro, bloquear menu de
+contexto e seleção de texto, cancelar o toque longo se o dedo mover mais de
+10 px. Feedback háptico com `navigator.vibrate` quando disponível.
 
 ## Progressão
 
@@ -218,8 +219,8 @@ esses três, o jogo parece feito por uma pessoa só, mesmo com técnicas mistas
 
 ## Escopo do MVP
 
-1. Um sítio jogável: 6×6, 4 ossos, primeiro clique seguro, flood fill, bandeira,
-   chord, vitória/derrota.
+1. Um sítio jogável: 6×6, 4 ossos, primeira escavação segura, flood fill,
+   bandeira, chord, vitória/derrota.
 2. Eoraptor com esqueleto procedural e montagem.
 3. Save local + tela de coleção simples.
 4. Paleta, fonte e HUD.

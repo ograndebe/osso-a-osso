@@ -3,11 +3,15 @@
 **Jogar:** https://ograndebe.github.io/osso-a-osso/
 
 Campo minado de escavação: limpe a terra, encontre os ossos e monte esqueletos
-de dinossauros para completar o museu. O primeiro clique é sempre seguro.
+de dinossauros para completar o museu. A primeira escavação é sempre segura.
 
 MVP com 12 sítios (Triássico, Jurássico, Cretáceo e Bônus), dificuldade
 progressiva, bandeira/interrogação, chord por duplo clique/toque, recordes e
 progresso salvo no `localStorage`.
+
+**Controles:** clique/toque marca bandeira → interrogação → vazio; segure o
+clique/toque (ou clique direito no desktop) para cavar; duplo clique/toque num
+número com as bandeiras certas abre as células ao redor.
 
 ## Rodar
 
@@ -28,7 +32,7 @@ npm run preview
 
 ## Estrutura
 
-- `src/board.ts` — geração do tabuleiro, primeiro clique seguro, flood fill, chord, vitória/derrota.
+- `src/board.ts` — geração do tabuleiro, primeira escavação segura, flood fill, chord, vitória/derrota.
 - `src/render.ts` — canvas do tabuleiro.
 - `src/main.ts` — telas, controles e progressão.
 - `src/data.ts` — sítios e fichas dos dinos.
