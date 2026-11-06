@@ -1,18 +1,18 @@
 :root {
   --ink: #1b1510;
-  --deep: #21160e;
-  --panel: #2a1d13;
-  --panel-2: #3a2a1e;
-  --line: #4a3222;
+  --deep: #261a10;
+  --panel: #302116;
+  --panel-2: #3f2e20;
+  --line: #5a4030;
   --dirt: #6b4a2f;
   --sand: #d9c7a3;
-  --bone: #f0e6cc;
-  --bone-dim: #b8a888;
-  --muted: #cbbd9f;
-  --red: #c2452d;
-  --amber: #e0a33a;
-  --green: #7a9a5a;
-  --violet: #a08ac0;
+  --bone: #f4ecd8;
+  --bone-dim: #d2c3a2;
+  --muted: #e0d3b8;
+  --red: #e06a50;
+  --amber: #f0b84a;
+  --green: #a8c97a;
+  --violet: #c9a8e8;
   --font-display: 'Silkscreen', monospace;
   --font-body: 'Pixelify Sans', monospace;
 }
@@ -33,7 +33,7 @@ body {
   min-height: 100dvh;
   color: var(--bone);
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
   background:
     radial-gradient(ellipse at 50% -10%, rgba(224, 163, 58, 0.12), transparent 55%),
@@ -57,6 +57,11 @@ button {
 button,
 [data-action] {
   -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
 }
 
 img {
@@ -103,7 +108,7 @@ img {
 .brand h1 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(16px, 2.4vw, 22px);
+  font-size: clamp(18px, 2.4vw, 24px);
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 0 #0f0b07;
   white-space: nowrap;
@@ -124,7 +129,7 @@ img {
   box-shadow: 0 3px 0 #0f0b07;
   padding: 5px 9px;
   font-family: var(--font-display);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--bone-dim);
@@ -210,15 +215,15 @@ img {
   margin: 0 0 6px;
   color: var(--amber);
   font-family: var(--font-display);
-  font-size: 9px;
-  letter-spacing: 1.6px;
+  font-size: 10px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 
 .hero h2 {
   margin: 0 0 5px;
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: clamp(30px, 4.2vw, 44px);
   line-height: 1.1;
   text-shadow: 3px 3px 0 #0f0b07;
 }
@@ -226,7 +231,7 @@ img {
 .hero-meta {
   margin: 0 0 12px;
   color: var(--bone-dim);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .hero-blurb {
@@ -263,7 +268,9 @@ img {
 }
 
 .silhouette {
-  filter: brightness(0) saturate(0) opacity(0.48) drop-shadow(0 8px 0 rgba(0, 0, 0, 0.35));
+  filter:
+    brightness(0) invert(0.85) sepia(0.2) opacity(0.42)
+    drop-shadow(0 8px 0 rgba(0, 0, 0, 0.35));
 }
 
 .era {
@@ -301,14 +308,14 @@ img {
   margin: 0;
   color: var(--accent);
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 19px;
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 0 #0f0b07;
 }
 
 .era-head span {
   color: var(--bone-dim);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .cards {
@@ -347,7 +354,7 @@ img {
 
 .dino-card:disabled {
   cursor: default;
-  opacity: 0.8;
+  opacity: 1;
   transform: none;
 }
 
@@ -366,8 +373,8 @@ img {
   display: block;
   height: 160px;
   background:
-    radial-gradient(circle at 50% 66%, rgba(240, 230, 204, 0.08), transparent 55%),
-    linear-gradient(180deg, #2f2116, #17100a);
+    radial-gradient(circle at 50% 66%, rgba(240, 230, 204, 0.12), transparent 58%),
+    linear-gradient(180deg, #3a2a1e, #1b1510);
   border-bottom: 2px solid var(--ink);
   overflow: hidden;
 }
@@ -383,7 +390,9 @@ img {
 
 .card-skeleton.silhouette,
 .hero-art.silhouette {
-  filter: brightness(0) saturate(0) opacity(0.5) drop-shadow(0 8px 0 rgba(0, 0, 0, 0.35));
+  filter:
+    brightness(0) invert(0.85) sepia(0.2) opacity(0.42)
+    drop-shadow(0 8px 0 rgba(0, 0, 0, 0.35));
 }
 
 .badge {
@@ -398,7 +407,7 @@ img {
   border: 1px solid rgba(240, 230, 204, 0.18);
   color: var(--bone);
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
 }
@@ -428,36 +437,36 @@ img {
 .card-era {
   color: var(--accent);
   font-family: var(--font-display);
-  font-size: 8px;
-  letter-spacing: 1.4px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .card-name {
   color: var(--bone);
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.3;
 }
 
 .card-meta {
   color: var(--bone-dim);
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .card-fact {
   margin-top: 2px;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .card-best {
   margin-top: 3px;
   color: var(--amber);
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -467,7 +476,7 @@ img {
   padding-top: 18px;
   border-top: 1px solid rgba(240, 230, 204, 0.12);
   color: var(--bone-dim);
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -488,7 +497,7 @@ img {
   color: var(--ink);
   box-shadow: 0 4px 0 #0f0b07;
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
   cursor: pointer;
@@ -536,7 +545,7 @@ img {
   background: transparent;
   color: var(--bone-dim);
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
   cursor: pointer;
@@ -582,8 +591,8 @@ img {
   margin: 0;
   color: var(--amber);
   font-family: var(--font-display);
-  font-size: 8px;
-  letter-spacing: 1.5px;
+  font-size: 10px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 
@@ -591,7 +600,7 @@ img {
   margin: 2px 0 0;
   overflow: hidden;
   font-family: var(--font-display);
-  font-size: clamp(16px, 3vw, 22px);
+  font-size: clamp(18px, 3.2vw, 24px);
   text-overflow: ellipsis;
   text-shadow: 2px 2px 0 #0f0b07;
   white-space: nowrap;
@@ -614,7 +623,7 @@ img {
   border: 2px solid var(--line);
   box-shadow: 0 3px 0 #0f0b07;
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .stat-bone {
@@ -625,7 +634,7 @@ img {
 
 .stat-label {
   color: var(--bone-dim);
-  font-size: 8px;
+  font-size: 9px;
   text-transform: uppercase;
 }
 
@@ -671,7 +680,7 @@ img {
   max-width: 680px;
   margin: 12px 0 0;
   color: var(--bone-dim);
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -726,7 +735,7 @@ dialog::backdrop {
 .modal-card h2 {
   margin: 8px 0 4px;
   font-family: var(--font-display);
-  font-size: clamp(22px, 5vw, 28px);
+  font-size: clamp(24px, 5vw, 30px);
   line-height: 1.2;
   text-align: center;
   text-shadow: 2px 2px 0 #0f0b07;
@@ -790,7 +799,7 @@ dialog::backdrop {
 .modal-meta {
   margin: 0 0 8px;
   color: var(--bone-dim);
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -802,7 +811,7 @@ dialog::backdrop {
   border: 1px solid rgba(224, 163, 58, 0.45);
   color: var(--amber);
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -822,7 +831,7 @@ dialog::backdrop {
   margin-bottom: 16px;
   color: var(--bone-dim);
   font-family: var(--font-display);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
 }
@@ -852,7 +861,7 @@ dialog::backdrop {
   background: var(--deep);
   border: 1px solid var(--line);
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -860,7 +869,7 @@ dialog::backdrop {
   margin: 0 0 6px;
   color: var(--amber);
   font-family: var(--font-display);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
@@ -879,7 +888,7 @@ dialog::backdrop {
   background: rgba(224, 163, 58, 0.08);
   border-left: 3px solid var(--amber);
   color: var(--bone);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -891,7 +900,7 @@ dialog::backdrop {
   background: none;
   color: var(--red);
   font-family: var(--font-display);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.5px;
   text-decoration: underline;
   text-transform: uppercase;
@@ -941,13 +950,76 @@ dialog::backdrop {
 /* ---------- responsivo ---------- */
 
 @media (max-width: 760px) {
+  body {
+    font-size: 19px;
+  }
+
   #app {
     padding: 12px 12px 30px;
+  }
+
+  .brand h1 {
+    font-size: 19px;
   }
 
   .hero {
     grid-template-columns: 1fr;
     padding: 16px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero-meta {
+    font-size: 16px;
+  }
+
+  .card-art {
+    height: 160px;
+  }
+
+  .card-name {
+    font-size: 18px;
+  }
+
+  .card-meta,
+  .card-fact {
+    font-size: 15px;
+  }
+
+  .controls {
+    font-size: 14px;
+  }
+
+  .dig-title {
+    font-size: 19px;
+  }
+
+  .stat {
+    font-size: 13px;
+  }
+
+  .modal-meta,
+  .help-box,
+  .help-tip {
+    font-size: 15px;
+  }
+
+  .modal-card h2 {
+    font-size: 26px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .text-btn {
+    font-size: 10px;
+  }
+
+  .foot {
+    font-size: 15px;
   }
 
   .hero-art-wrap {
@@ -968,7 +1040,7 @@ dialog::backdrop {
   }
 
   .card-art {
-    height: 150px;
+    height: 160px;
   }
 
   .help-cols {

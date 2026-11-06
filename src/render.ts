@@ -63,14 +63,14 @@ const DIGITS: Record<number, string[]> = {
 };
 
 const DIGIT_COLORS: Record<number, string> = {
-  1: '#6b4a2f',
-  2: '#4f6b3a',
-  3: '#b03a26',
-  4: '#3f5f7a',
-  5: '#8a4a2a',
-  6: '#4f7a78',
-  7: '#3a2a1e',
-  8: '#5a4a6a',
+  1: '#4b2f1b',
+  2: '#2f4a22',
+  3: '#8a2418',
+  4: '#24435f',
+  5: '#5a2d16',
+  6: '#2f5a58',
+  7: '#1b1510',
+  8: '#3f2f4f',
 };
 
 function tileVariant(index: number, count: number): number {
@@ -132,7 +132,7 @@ function drawDigit(
   const pattern = DIGITS[value];
   if (!pattern) return;
 
-  const scale = Math.max(1, Math.min(8, Math.floor(cell / 9)));
+  const scale = Math.max(1, Math.min(8, Math.floor(cell / 7)));
   const width = 3 * scale;
   const height = 5 * scale;
   const originX = x + (cell - width) / 2;
